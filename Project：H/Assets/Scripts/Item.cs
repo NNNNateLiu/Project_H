@@ -28,11 +28,16 @@ public class Item : MonoBehaviour
 
     public void OnItemPickedUp()
     {
+        //把item放到UI里
         Debug.Log(itemName + " Picked Up!");
         slotInBag.GetComponent<Image>().sprite = itemSprite;
         slotInBag.transform.GetChild(0).GetComponent<Text>().text = itemName;
         slotInBag.GetComponent<UIBagSlot>().isHaveItem = true;
         slotInBag.GetComponent<UIBagSlot>().itemInSlot = gameObject.GetComponent<Item>();
+        //把item储存在玩家身上
+        
+        
+        //销毁在地图上的item
         if (canBePickedUp)
         {
             Destroy(gameObject);

@@ -172,5 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc66134c70ca24a94b1007cb2092892b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSpriteBG: {fileID: 21300000, guid: d5121415c1aa277498c88c8028cdbf93, type: 3}
   isHaveItem: 0
   itemInSlot: {fileID: 0}
+  intro_BG: {fileID: 0}

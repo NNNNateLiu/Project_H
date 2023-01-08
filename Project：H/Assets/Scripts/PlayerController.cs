@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [Header("status")]
     public GameObject canMove;
 
+    [Header("items")] 
+    public bool isHaveTicket;
    
 
     private void Start()

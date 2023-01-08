@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class UIBagSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    public Sprite defaultSpriteBG;
     public bool isHaveItem;
     public Item itemInSlot;
 
@@ -43,5 +44,13 @@ public class UIBagSlot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerUp(PointerEventData pointerEventData)
     {
         Debug.Log(name + "No longer being clicked");
+    }
+
+    public void RemoveItemFromSlot()
+    {
+        GetComponent<Image>().sprite = defaultSpriteBG;
+        transform.GetChild(0).GetComponent<Text>().text = "";
+        isHaveItem = false;
+        itemInSlot = null;
     }
 }
