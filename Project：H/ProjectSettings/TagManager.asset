@@ -7,6 +7,7 @@ TagManager:
   - item
   - Laser
   - Enemy
+  - Tips
   layers:
   - Default
   - TransparentFX
@@ -55,6 +56,9 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 856522467
+    locked: 0
+  - name: UI
+    uniqueID: 2054653537
     locked: 0
   - name: Environment_Top
     uniqueID: 3966477643
