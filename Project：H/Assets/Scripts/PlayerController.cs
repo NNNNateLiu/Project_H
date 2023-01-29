@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("status")]
     public GameObject canMove;
+    private bool canAutoRightmove;
+    private bool canAutoLeftmove;
+    private bool canAutoFrontmove;
+    private bool canAutoBackmove;
+    private int automove;
+    private float timer;
 
     [Header("items")] 
     public bool isHaveTicket;
@@ -21,19 +27,31 @@ public class PlayerController : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         canMove.SetActive(true);
         rb2d.simulated = true;
+        animator.SetBool("isrunning", false);
+        timer = 1f;
+        canAutoRightmove = false;
+        canAutoLeftmove = false;
+        canAutoFrontmove = false;
+        canAutoBackmove = false;
     }
-    
+
     private void Update()
     {
+        //Player Move
         if (canMove.activeSelf is true)
         {
             rb2d.simulated = true;
-            speed = 0.5f ;
+            speed = 0.5f;
 
             //character running
-            if (Input.GetKey(KeyCode.LeftShift ))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
+                animator.SetBool("isrunning", true);
                 speed = 1f;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                animator.SetBool("isrunning", false);
             }
 
             //activate animation
@@ -46,8 +64,74 @@ public class PlayerController : MonoBehaviour
             rb2d.simulated = false;
             //disable animation
             animator.enabled = false;
+        }
 
 
+
+        //Player Auto Move    
+        if (canAutoRightmove)
+        {
+            timer -= Time.deltaTime;
+            if (timer > 0)
+            {
+                automove = 4;
+               // Debug.Log("havetime");
+            }
+            if (timer <= 0)
+            {
+                canAutoRightmove = false;
+                timer = 1f;
+                automove = 0;
+                //Debug.Log("Timesup!");
+            }
+        }
+        if (canAutoLeftmove)
+        {
+            timer -= Time.deltaTime;
+            if (timer > 0)
+            {
+                automove = 3;
+               // Debug.Log("havetime");
+            }
+            if (timer <= 0)
+            {
+                canAutoLeftmove = false;
+                timer = 1f;
+                automove = 0;
+               // Debug.Log("Timesup!");
+            }
+        }
+        if (canAutoFrontmove)
+        {
+            timer -= Time.deltaTime;
+            if (timer > 0)
+            {
+                automove = 1;
+               // Debug.Log("havetime");
+            }
+            if (timer <= 0)
+            {
+                canAutoFrontmove = false;
+                timer = 1f;
+                automove = 0;
+                //Debug.Log("Timesup!");
+            }
+        }
+        if (canAutoBackmove)
+        {
+            timer -= Time.deltaTime;
+            if (timer > 0)
+            {
+                automove = 2;
+                //Debug.Log("havetime");
+            }
+            if (timer <= 0)
+            {
+                canAutoBackmove = false;
+                timer = 1f;
+                automove = 0;
+                //Debug.Log("Timesup!");
+            }
         }
     }
 
@@ -62,69 +146,70 @@ public class PlayerController : MonoBehaviour
         rb2d.velocity = moveDirection * speed;
 
         // move animation
+        //still
+        if (horizontalInput == 0|| verticalInput==0 || automove == 0) ;
+        {
+            animator.SetInteger("MoveInt", 0);
+        }
+
         //Left move
-        if (horizontalInput < 0)
+        if (horizontalInput < 0 || automove==3)
         {
-            animator.SetBool("Left", true);
+            animator.SetInteger("MoveInt", 3);
         }
-        else 
-        {
-            animator.SetBool("Left", false);
-        }
+        
 
         //Right move
-        if (horizontalInput > 0)
+        if (horizontalInput > 0 || automove == 4)
         {
-            animator.SetBool("Right", true);
+            animator.SetInteger("MoveInt", 4);
         }
-        else
+        /*
+        if (horizontalInput > 0 && Input.GetKey(KeyCode.LeftShift))
         {
-            animator.SetBool("Right", false);
-        }
+            animator.SetInteger("MoveInt", -4);
+        }*/
 
         //Front move
-        if (verticalInput < 0)
+        if (verticalInput < 0 || automove == 1)
         {
-            animator.SetBool("Front", true);
+            animator.SetInteger("MoveInt", 1);
         }
-        else
+        /*
+        if (verticalInput < 0 && Input.GetKey(KeyCode.LeftShift))
         {
-            animator.SetBool("Front", false);
-        }
+            animator.SetInteger("MoveInt", -1);
+        }*/
 
         //Back move
-        if (verticalInput > 0)
+        if (verticalInput > 0 || automove == 2)
         {
-            animator.SetBool("Back", true);
+            animator.SetInteger("MoveInt", 2);
         }
-        else
-        {
-            animator.SetBool("Back", false);
-        }
-
-
         /*
-        //play back animation
-        if (Input.GetKeyDown(KeyCode.W))
+        if (verticalInput > 0 && Input.GetKey(KeyCode.LeftShift))
         {
-            animator.SetBool("Back", true); 
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            animator.SetBool("Back", false);
-        }
-
-
-        //play right animation
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            animator.SetBool("Right", true); 
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            animator.SetBool("Right", false);
-        }
-        */
+            animator.SetInteger("MoveInt", -2);
+        }*/
     }
+
+    //automove method(conbined with area_noExplore function)
+    public void Auto_right_move()
+    {
+        canAutoRightmove = true;
+    }
+    public void Auto_left_move()
+    {
+        canAutoLeftmove = true;
+    }
+    public void Auto_front_move()
+    {
+        canAutoFrontmove = true;
+    }
+    public void Auto_back_move()
+    {
+        canAutoBackmove = true;
+    }
+
 }
 
