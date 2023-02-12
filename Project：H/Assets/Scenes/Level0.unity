@@ -2396,7 +2396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &52253852
 Transform:
   m_ObjectHideFlags: 0
@@ -2523,7 +2523,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 60.63014
     y: 69
-    width: 110.57143
+    width: 108.69571
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2558,19 +2558,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 330.60342, y: 57.42126}
+  scrollPos: {x: 534.9086, y: 415.54138}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 561.1429
-  zoom: 1
+  zoom: 0.45999953
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 52253857}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -15642,7 +15641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 512469121}
+  selectedFlowchart: {fileID: 52253858}
 --- !u!4 &370952102
 Transform:
   m_ObjectHideFlags: 1
@@ -20433,7 +20432,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 64.96908
     y: 69.75821
-    width: 115.584404
+    width: 113.63635
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

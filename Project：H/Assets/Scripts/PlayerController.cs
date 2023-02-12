@@ -18,9 +18,15 @@ public class PlayerController : MonoBehaviour
     private int automove;
     private float timer;
 
+    [Header("Battle")] 
+    public int MaxHP = 6;
+    public int CurrentHP = 6;
+    public GameObject UIHPBar;
+
     [Header("items")] 
     public bool isHaveTicket;
    
+    
 
     private void Start()
     {
@@ -132,6 +138,18 @@ public class PlayerController : MonoBehaviour
                 automove = 0;
                 //Debug.Log("Timesup!");
             }
+        }
+        
+        //debug
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            CurrentHP--;
+            UIHPBar.GetComponent<UIHPBar>().OnHPChange();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            CurrentHP++;
+            UIHPBar.GetComponent<UIHPBar>().OnHPChange();
         }
     }
 

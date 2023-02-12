@@ -25,6 +25,7 @@ public class UICutscene : MonoBehaviour
     public void TeleportPlayerToPosition()
     {
         player.transform.position = teleportToTransform.position;
+        Debug.Log("Teleport success");
         Camera.main.GetComponent<CameraController>().topRightBorder = targetSceneCameraTopRightBorder;
         Camera.main.GetComponent<CameraController>().bottomLeftBorder = targetSceneCameraBottomLeftBorder;
     }
