@@ -7,7 +7,7 @@ public class Area_noExplore : MonoBehaviour
     public Rigidbody2D rb2D;
     public Animator animator;
     public Vector2 Velocity;
-    private float speed=9f;
+    private float speed=3f;
     private float timer = 1f;
     public bool isLeft;
     public bool isRight;

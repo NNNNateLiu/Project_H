@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Tips
   - noExplore
+  - Mask
   layers:
   - Default
   - TransparentFX

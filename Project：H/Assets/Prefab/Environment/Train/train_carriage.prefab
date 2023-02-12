@@ -1217,7 +1217,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1005463684453395558}
   - component: {fileID: 1005463684453395557}
-  - component: {fileID: 4149447854983201596}
   m_Layer: 0
   m_Name: railing_vertical
   m_TagString: Untagged
@@ -1233,7 +1232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005463684453395559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.737, y: 14.752, z: -0.05959986}
+  m_LocalPosition: {x: 28.033, y: 14.752, z: -0.05959986}
   m_LocalScale: {x: 1, y: 0.8125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1292,32 +1291,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4149447854983201596
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005463684453395559}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3513446}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03, y: 0.73}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.03, y: 0.027310818}
-  m_EdgeRadius: 0
 --- !u!1 &1005463684527813136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +1829,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1005463684165255497}
   - component: {fileID: 7461944288607618926}
-  - component: {fileID: 6371543404550583923}
   m_Layer: 0
   m_Name: railing_vertical (3)
   m_TagString: Untagged
@@ -1872,7 +1844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2849623161116147279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.225, y: 14.724, z: -0.05959986}
+  m_LocalPosition: {x: 31.888, y: 14.724, z: -0.05959986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1931,32 +1903,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6371543404550583923
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2849623161116147279}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.32763398}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03, y: 0.73}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.03, y: 0.074732065}
-  m_EdgeRadius: 0
 --- !u!1 &4025505610073657134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1005463684436760693}
   - component: {fileID: 7365092014170599923}
-  - component: {fileID: 5164971941669846147}
   m_Layer: 0
   m_Name: railing_vertical (1)
   m_TagString: Untagged
@@ -2322,32 +2267,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5164971941669846147
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6639493327359214010}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3471042}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03, y: 0.73}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.03, y: 0.035791636}
-  m_EdgeRadius: 0
 --- !u!1 &6783451066877323547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,7 +2499,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1005463684753308306}
   - component: {fileID: 5118241311202175517}
-  - component: {fileID: 2208731583851415612}
   m_Layer: 0
   m_Name: railing_vertical (2)
   m_TagString: Untagged
@@ -2655,32 +2573,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2208731583851415612
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428169680037090095}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.33325684}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03, y: 0.73}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.03, y: 0.06348634}
-  m_EdgeRadius: 0
 --- !u!1 &8435052300415284128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,7 +2583,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2862274240807227930}
   - component: {fileID: 4794940021009523273}
-  - component: {fileID: 4499223734128468467}
   m_Layer: 0
   m_Name: railing_vertical (4)
   m_TagString: Untagged
@@ -2766,29 +2657,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4499223734128468467
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435052300415284128}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00033283234, y: -0.21806236}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.02, y: 0.51}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.02001381, y: 0.06789091}
-  m_EdgeRadius: 0

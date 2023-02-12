@@ -6,6 +6,7 @@ using UnityEngine;
 public class InteractPorps : MonoBehaviour
 {
     public GameObject interactFlowchart;
+    //public GameObject interactObject;
     private bool isWitninInteractRange;
     
     //靠近一定范围的时候，按F与物体交互，显示对话框，禁用移动
@@ -33,6 +34,7 @@ public class InteractPorps : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && isWitninInteractRange)
         {
             interactFlowchart.SetActive(true);
+            //interactObject.SetActive(true);
         }
     }
 }
