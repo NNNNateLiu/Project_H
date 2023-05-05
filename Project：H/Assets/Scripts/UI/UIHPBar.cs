@@ -17,18 +17,17 @@ public class UIHPBar : MonoBehaviour
     public Sprite HP_Bar_Yellow;
     public Sprite HP_Bar_Red;
     
-    private GameObject player;
+    public GameObject player;
 
     private void Start()
     {
-        player = GameObject.Find("Player");
     }
 
     public void OnHPChange()
     {
         for (int i = 0; i < Img_HP_Bars.Length; i++)
         {
-            if (i >= player.GetComponent<PlayerController>().CurrentHP)
+            if (i >= player.GetComponent<Player_HP>().CurrentHP)
             {
                 Img_HP_Bars[i].gameObject.SetActive(false);
             }
@@ -39,11 +38,11 @@ public class UIHPBar : MonoBehaviour
         }
         
         //修改生命值背景条长度
-        float tempX = 1 - (6 - player.GetComponent<PlayerController>().CurrentHP) * 0.15f;
+        float tempX = 1 - (6 - player.GetComponent<Player_HP>().CurrentHP) * 0.15f;
         Img_HP_Bar_BG.localScale = new Vector3(tempX, 1, 1);
         
         //当玩家生命值 > 3
-        if (player.GetComponent<PlayerController>().CurrentHP > 3)
+        if (player.GetComponent<Player_HP>().CurrentHP > 3)
         {
             Img_HP_Icon.sprite = HP_Icon_Blue;
             foreach (var bar in Img_HP_Bars)
@@ -54,7 +53,7 @@ public class UIHPBar : MonoBehaviour
         else
         {
             //当玩家生命值 = 3
-            if (player.GetComponent<PlayerController>().CurrentHP == 3)
+            if (player.GetComponent<Player_HP>().CurrentHP == 3)
             {
                 Img_HP_Icon.sprite = HP_Icon_Yellow;
                 foreach (var bar in Img_HP_Bars)

@@ -27,6 +27,8 @@ AnimationClip:
       value: {fileID: 21300000, guid: dab541df5ec863b45825fa0d5ed6cf6d, type: 3}
     - time: 0.25
       value: {fileID: 21300000, guid: 362b6d577dc42414f8e945244c267ce2, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 362b6d577dc42414f8e945244c267ce2, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,12 +52,13 @@ AnimationClip:
     - {fileID: 21300000, guid: 0a1019a08ce7c334fb1f50d834ff3f9b, type: 3}
     - {fileID: 21300000, guid: dab541df5ec863b45825fa0d5ed6cf6d, type: 3}
     - {fileID: 21300000, guid: 362b6d577dc42414f8e945244c267ce2, type: 3}
+    - {fileID: 21300000, guid: 362b6d577dc42414f8e945244c267ce2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 1.0833334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,4 +77,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.16666667
+    functionName: Leftbullet
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.9166667
+    functionName: Rest
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

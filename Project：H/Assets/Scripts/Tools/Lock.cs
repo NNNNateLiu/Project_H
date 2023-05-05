@@ -121,14 +121,33 @@ public class Lock : MonoBehaviour
                 Destroy(UI_Lock);
                 Destroy(door);
                 Destroy(mask_layer);
-}
+                StartCoroutine("CloseUI");
+            }
             else 
             {
                 tips.text = "wrong password!";
                 tips.color = Color.red;
                // Debug.Log("no");
             }
+
+            //close board after finish
         }
+        /*
+        if (finish == true)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Destroy(gameObject);
+            }
+        }
+        */
     }
-    
+
+
+    public IEnumerator CloseUI()
+    {
+        yield return new WaitForSeconds(1f);
+        canmove.SetActive(true);
+        Destroy(gameObject);
+    }
 }

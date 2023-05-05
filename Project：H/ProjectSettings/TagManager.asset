@@ -10,6 +10,10 @@ TagManager:
   - Tips
   - noExplore
   - Mask
+  - AirWall
+  - determine
+  - Enemy_hurt
+  - Player_attack
   layers:
   - Default
   - TransparentFX
