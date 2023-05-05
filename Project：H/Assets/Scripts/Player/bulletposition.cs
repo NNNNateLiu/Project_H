@@ -22,6 +22,7 @@ public class bulletposition : MonoBehaviour
     void Start()
     {
         rb2d = bulletPrefab.GetComponent<Rigidbody2D>();
+        Instantiate(bulletPrefab, bulletPoint_L.position, Quaternion.identity);
     }
 
 

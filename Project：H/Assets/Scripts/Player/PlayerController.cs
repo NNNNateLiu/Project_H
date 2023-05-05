@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     [Header("status")]
     public GameObject canMove;
     public GameObject canFire;
+
+    private bool isFiring;
+    
     private bool canAutoRightmove;
     private bool canAutoLeftmove;
     private bool canAutoFrontmove;
@@ -66,7 +69,12 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetInteger("StatusInt", 0);
             }
-            Move();
+
+            if (!isFiring)
+            {
+                Move();
+            }
+
             if(canFire.activeSelf is true)
             {
                 Fire();
@@ -102,12 +110,14 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        //player move function
         var horizontalInput = Input.GetAxisRaw("Horizontal");
         var verticalInput = Input.GetAxisRaw("Vertical");
         //Debug.Log("horizontalInput: " +horizontalInput + "  " + "verticalInput: " + verticalInput);
         Vector2 moveDirection = new Vector2(horizontalInput, verticalInput);
+        
         rb2d.velocity = moveDirection * speed;
+
+
 
         // move animation
         //still
@@ -165,10 +175,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
+            isFiring = true;
             animator.SetBool("isattack", true);
         }
         if (Input.GetKeyUp(KeyCode.J))
         {
+            isFiring = false;
             animator.SetBool("isattack", false);
         }
     }

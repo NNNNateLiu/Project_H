@@ -13,15 +13,13 @@ public class Bullet : MonoBehaviour
     public GameObject Right;
 
     private CircleCollider2D poly2D;
+    
+    public float recoilForce;
 
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-    }
-
-
-    void Update()
-    {
+        
         //rb2d.AddForce(Vector2.down * speed);
         rb2d.velocity = Vector2.down * speed;
         if ( Top.activeSelf is true )
@@ -38,6 +36,14 @@ public class Bullet : MonoBehaviour
         {
             rb2d.velocity = Vector2.right * speed;
         }
+
+        AddRecoilImpulse();
+    }
+
+
+    void Update()
+    {
+        
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -60,5 +66,26 @@ public class Bullet : MonoBehaviour
             }
 
         }
+    }
+    
+    void AddRecoilImpulse()
+    {
+        Rigidbody2D playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        
+        Vector2 recoilDirection = Vector2.up;
+        if (Top.activeSelf)
+        {
+            recoilDirection = Vector2.down;
+        }
+        else if (Left.activeSelf)
+        {
+            recoilDirection = Vector2.right;
+        }
+        else if (Right.activeSelf)
+        {
+            recoilDirection = Vector2.left;
+        }
+
+        playerRB.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
     }
 }
